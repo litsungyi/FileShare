@@ -1,0 +1,76 @@
+/*******************************************************************************
+
+  Name:           No IE Information Bar
+  Version:        0.2.6
+  Date:           December 14, 2004
+  Author:         Martin Ng <http://minghong.webhop.org>
+
+  ------------------------------------------------------------------------------
+
+  Creative Commons Deed
+  Attribution-NonCommercial 2.0
+
+  You are free:
+  * to copy, distribute, display, and perform the work
+  * to make derivative works
+
+  Under the following conditions:
+  * Attribution.
+    You must give the original author credit.
+  * Noncommercial.
+    You may not use this work for commercial purposes.
+  * For any reuse or distribution, you must make clear to others the license
+    terms of this work.
+  * Any of these conditions can be waived if you get permission from the
+    copyright holder.
+
+  Your fair use and other rights are in no way affected by the above.
+
+  Read full license here:
+  http://creativecommons.org/licenses/by-nc/2.0/legalcode
+
+*******************************************************************************/
+
+html {
+    border: 0 0 auto 0 !important;
+}
+
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+}
+
+/* A fake IE information bar */
+#infobar {
+    font: message-box;
+}
+
+/* Please adjust the values if the infobar is not looking good */
+#infobar a, #infobar a:link, #infobar a:visited, #infobar a:active {
+    display: block;
+    float: left;
+    clear: both;
+    width: 100%;
+    color: InfoText;
+    background: InfoBackground url("../images/warning.gif") no-repeat fixed .3em .3em;
+    padding: .45em .3em .45em 2em;
+    border-bottom: .16em outset;
+    text-align: left;
+    text-decoration: none;
+    cursor: default;
+}
+
+#infobar a:hover {
+    color: HighlightText;
+    background-color: Highlight;
+}
+
+/* A fake viewplot for IE information bar */
+#viewplot {
+    width: 100%;
+    height: expression( this.parentNode.offsetHeight - this.offsetTop );
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding: 1em;   /* Please set this to the value as that of your <body> */
+}
